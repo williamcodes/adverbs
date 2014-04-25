@@ -7,10 +7,6 @@ distances_to_stars = [
   1.0239874029538475e+21
 ]
 
-distances_to_stars.sum #=> 1.0473617207163307e+21
-distances_to_stars.average #=> 1.745602867860551e+20
-distances_to_stars.product #=> 7.233779610009546e+105
-
 class Array
   def sum
     reduce(&:+)
@@ -23,10 +19,17 @@ class Array
   def product
     reduce(&:*)
   end
+
+  def roughly
+  end
 end
+
+distances_to_stars.sum #=> 1.0473617207163307e+21
+distances_to_stars.average #=> 1.745602867860551e+20
+distances_to_stars.product #=> 7.233779610009546e+105
 
 distances_to_stars.roughly.sum #=> 1e+21
 distances_to_stars.roughly.average #=> 1e+20
 distances_to_stars.roughly.product #=> 1e+206
 
-# solve for roughly
+# solve for roughly so that it makes the code execute faster
